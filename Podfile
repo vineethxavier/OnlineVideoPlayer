@@ -10,7 +10,7 @@ target 'Project_Final' do
   pod 'RealmSwift'
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
-  
+  pod 'YouTubePlayer'  
   # Pods for Project_Final
 
 end

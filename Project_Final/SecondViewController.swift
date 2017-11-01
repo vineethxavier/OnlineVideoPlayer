@@ -12,7 +12,9 @@ import RealmSwift // DB
 import SVProgressHUD // loading progress
 import GoogleSignIn
 import SwiftyJSON
-
+import AVKit
+import AVFoundation
+import YouTubePlayer
 
 //var SearchResult: Results<Search>!
 //var realm = try! Realm()
@@ -70,11 +72,12 @@ var vidDescrArr = [String]()
 var urlSearchVal:String? = "swift"
 var imag = [UIImage]()
 
+
 /*  ---------------------- View controller Class  ----------------------  */
 
 class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
-   /*  ---------------------- Start of Collection View ----------------------  */
+/*  ---------------------- Start of Collection View ----------------------  */
     
     @IBOutlet weak var VideoViewCollection: UICollectionView!
     
@@ -113,6 +116,18 @@ class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: BaseRoundedCardCell.cellHeight)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier :"104") as! popOverViewController
+        self.present(viewController, animated: true)
+        
+        //let video = "https://www.youtube.com/watch?v=\(vidIDArr[indexPath.row])"
+        //let url = URL(string: video)
+        //viewController.player = AVPlayer(url: url!)
+        //viewController.player?.play()
     }
 
     /*  ---------------------- End of Collection View ----------------------  */
@@ -155,6 +170,7 @@ class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionVie
             vidIDArr.append(String(describing: json["items"][i]["id"]["videoId"]))
             
             vidImgUrlArr.append(String(describing: json["items"][i]["snippet"]["thumbnails"]["high"]["url"]))
+           
             
             vidDescrArr.append(String( describing: json["items"][i]["snippet"]["description"]))
         }

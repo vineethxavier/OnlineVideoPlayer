@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HwB-uF-61C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,81 +136,37 @@
             <point key="canvasLocation" x="1821.5999999999999" y="98.50074962518741"/>
         </scene>
         <!--Pop Over View Controller-->
-        <scene sceneID="fD5-Dy-0O2">
+        <scene sceneID="cff-v1-sKc">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="BRT-fB-Bhd" customClass="popOverViewController" customModule="Project_Final" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W3k-Yd-0Xb">
+                <viewController storyboardIdentifier="104" modalPresentationStyle="overCurrentContext" id="7OV-aK-3CT" customClass="popOverViewController" customModule="Project_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8pP-DF-E7K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cv2-3E-Q0Z">
-                                <rect key="frame" x="37" y="135" width="301" height="352"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi1-cz-sba">
-                                        <rect key="frame" x="8" y="0.0" width="293" height="44"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-94-3aX">
-                                        <rect key="frame" x="8" y="40" width="293" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-yX-6lY">
-                                        <rect key="frame" x="52" y="276" width="205" height="30"/>
-                                        <color key="backgroundColor" red="0.63174895600000003" green="0.62921314110000004" blue="0.67350751099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.69697810910000002" green="0.0" blue="0.065043615720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelAction:" destination="BRT-fB-Bhd" eventType="touchUpInside" id="gF2-GV-m2X"/>
-                                        </connections>
-                                    </button>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWG-zb-Cs9">
-                                        <rect key="frame" x="0.0" y="84" width="301" height="156"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </webView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.75717022190000005" green="0.75750779850000005" blue="0.80587722080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="DWG-zb-Cs9" firstAttribute="leading" secondItem="Cv2-3E-Q0Z" secondAttribute="leading" id="4LF-hb-k6m"/>
-                                    <constraint firstItem="Wi1-cz-sba" firstAttribute="leading" secondItem="Cv2-3E-Q0Z" secondAttribute="leadingMargin" id="DOK-Qi-Mfw"/>
-                                    <constraint firstItem="Kaj-94-3aX" firstAttribute="top" secondItem="Cv2-3E-Q0Z" secondAttribute="top" constant="40" id="Gl1-ik-CMc"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wi1-cz-sba" secondAttribute="trailing" id="HIy-N0-K3S"/>
-                                    <constraint firstItem="DWG-zb-Cs9" firstAttribute="top" secondItem="Kaj-94-3aX" secondAttribute="bottom" constant="24" id="IZu-6F-VP1"/>
-                                    <constraint firstItem="Wi1-cz-sba" firstAttribute="top" secondItem="Cv2-3E-Q0Z" secondAttribute="top" id="SiU-cO-Qda"/>
-                                    <constraint firstItem="Kaj-94-3aX" firstAttribute="trailing" secondItem="DWG-zb-Cs9" secondAttribute="trailing" id="UcZ-ay-IZr"/>
-                                    <constraint firstItem="Kaj-94-3aX" firstAttribute="centerX" secondItem="tJi-yX-6lY" secondAttribute="centerX" id="Y4S-BL-3IJ"/>
-                                    <constraint firstItem="DWG-zb-Cs9" firstAttribute="top" secondItem="Wi1-cz-sba" secondAttribute="bottom" constant="40" id="bKL-Jf-OSy"/>
-                                    <constraint firstItem="tJi-yX-6lY" firstAttribute="top" secondItem="DWG-zb-Cs9" secondAttribute="bottom" constant="36" id="dpH-NQ-Upt"/>
-                                    <constraint firstAttribute="bottom" secondItem="tJi-yX-6lY" secondAttribute="bottom" constant="46" id="jVJ-hc-r6z"/>
-                                    <constraint firstItem="tJi-yX-6lY" firstAttribute="leading" secondItem="Cv2-3E-Q0Z" secondAttribute="leading" constant="52" id="kuC-mJ-6pz"/>
-                                    <constraint firstItem="Wi1-cz-sba" firstAttribute="trailing" secondItem="Kaj-94-3aX" secondAttribute="trailing" id="zqa-uk-bVx"/>
-                                    <constraint firstItem="Wi1-cz-sba" firstAttribute="leading" secondItem="Kaj-94-3aX" secondAttribute="leading" id="zzU-84-mfy"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-SY-aJc" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="150" width="375" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63174895600000003" green="0.62921314110000004" blue="0.67350751099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deleteme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiN-Ax-4SX">
+                                <rect key="frame" x="165" y="517" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MMh-m8-NVt" firstAttribute="bottom" secondItem="Cv2-3E-Q0Z" secondAttribute="bottom" constant="180" id="6mb-2W-c9g"/>
-                            <constraint firstItem="Cv2-3E-Q0Z" firstAttribute="centerX" secondItem="W3k-Yd-0Xb" secondAttribute="centerX" id="Eu4-oK-DE8"/>
-                            <constraint firstItem="Cv2-3E-Q0Z" firstAttribute="leading" secondItem="MMh-m8-NVt" secondAttribute="leading" constant="37" id="mUu-A8-8S8"/>
-                            <constraint firstItem="Cv2-3E-Q0Z" firstAttribute="top" secondItem="MMh-m8-NVt" secondAttribute="top" constant="115" id="zpt-d5-JX1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="MMh-m8-NVt"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="mj8-4r-EbC"/>
                     </view>
                     <connections>
-                        <outlet property="myWebView" destination="DWG-zb-Cs9" id="lNg-qO-FdA"/>
-                        <outlet property="videoTitleLbl" destination="Wi1-cz-sba" id="uNr-Rj-nuX"/>
-                        <outlet property="videoUrlLbl" destination="Kaj-94-3aX" id="0HY-Io-Qp5"/>
+                        <outlet property="Back" destination="LiN-Ax-4SX" id="WLx-Mb-6sy"/>
+                        <outlet property="videoPlayer" destination="lhz-SY-aJc" id="eKF-YY-ChJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V3a-WN-PE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHP-kS-jB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2836" y="99"/>
+            <point key="canvasLocation" x="2607.1999999999998" y="100.29985007496252"/>
         </scene>
     </scenes>
     <resources>
