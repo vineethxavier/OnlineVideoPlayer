@@ -94,13 +94,13 @@
 			isa = PBXGroup;
 			children = (
 				01D05CBC1FA27502005ADA39 /* AppDelegate.swift */,
-				01D05CBE1FA27502005ADA39 /* ViewController.swift */,
-				01D05CC01FA27502005ADA39 /* Main.storyboard */,
-				AC4D030F1FA3F46C0007AFFC /* PopOverViewController.swift */,
 				01D05CC31FA27502005ADA39 /* Assets.xcassets */,
 				01D05CC51FA27502005ADA39 /* LaunchScreen.storyboard */,
 				01D05CC81FA27502005ADA39 /* Info.plist */,
+				01D05CBE1FA27502005ADA39 /* ViewController.swift */,
 				AC4D03111FA3F4CE0007AFFC /* SecondViewController.swift */,
+				AC4D030F1FA3F46C0007AFFC /* PopOverViewController.swift */,
+				01D05CC01FA27502005ADA39 /* Main.storyboard */,
 				0150A59A1FA9009C0071927E /* Cells */,
 				0150A5951FA8FE2A0071927E /* Animation */,
 				019222341FA278A2006B9DA4 /* GoogleService-Info (1).plist */,
@@ -395,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52872MAFU3;
+				DEVELOPMENT_TEAM = RCFH7Y85S3;
 				INFOPLIST_FILE = Project_Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.varunyadav.Project-Final";
@@ -411,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52872MAFU3;
+				DEVELOPMENT_TEAM = RCFH7Y85S3;
 				INFOPLIST_FILE = Project_Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.varunyadav.Project-Final";

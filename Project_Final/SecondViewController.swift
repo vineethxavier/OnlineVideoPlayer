@@ -122,6 +122,9 @@ class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionVie
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier :"104") as! popOverViewController
+       viewController.videoId = vidIDArr[indexPath.row]
+        
+        
         self.present(viewController, animated: true)
         
         //let video = "https://www.youtube.com/watch?v=\(vidIDArr[indexPath.row])"
