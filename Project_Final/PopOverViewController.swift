@@ -19,9 +19,12 @@ class popOverViewController: UIViewController,YouTubePlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        videoPlayer.delegate = self
         if let vidId = videoId {
+            self.view.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.30, alpha: 0.15)
+            //autoplay and play with in size(not full screen
+            videoPlayer.playerVars = ["autoplay":"0" as AnyObject, "playsinline": "1" as AnyObject]
             videoPlayer.loadVideoID(vidId)
-            videoPlayer.play()
         }
     }//viewDidLoad
     
@@ -32,7 +35,10 @@ class popOverViewController: UIViewController,YouTubePlayerDelegate {
     }//viewDidAppear
     
     func playerReady(_ videoPlayerParam: YouTubePlayerView) {
-        videoPlayer.play()
-    }
+        print("====plyer ready==========")
+        videoPlayerParam.play()
+        //videoPlayer.play() // this also works
+    }  
 }//popOverViewController
+
 

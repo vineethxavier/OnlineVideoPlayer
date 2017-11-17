@@ -19,9 +19,6 @@ import YouTubePlayer
 //var SearchResult: Results<Search>!
 //var realm = try! Realm()
 
-
-
-
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -122,7 +119,7 @@ class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionVie
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier :"104") as! popOverViewController
-       viewController.videoId = vidIDArr[indexPath.row]
+        viewController.videoId = vidIDArr[indexPath.row]
         
         
         self.present(viewController, animated: true)
@@ -141,14 +138,15 @@ class SecondViewController: UIViewController,UISearchBarDelegate,UICollectionVie
     
      /*  ---------------------- Alamofire ----------------------  */
     func getVideoData(){
-        let UrlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=\(urlSearchVal!.trimmingCharacters(in: .whitespacesAndNewlines))&key=AIzaSyDtV7aOWU_pgdAl6MM4ndOOsOgvdMQbFKM&type=video"
-        
+        let urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=\(urlSearchVal!)&key=AIzaSyDtV7aOWU_pgdAl6MM4ndOOsOgvdMQbFKM&type=video"
+        // ignoring white space in search
+        let UrlString :String = urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let parameters: Parameters = ["items": [items]()]
         
         Alamofire.request(UrlString, method: .get,parameters: parameters).responseJSON{
             response in
             
-            if response.result.isSuccess{
+            if response.result.isSuccess {
                 let videoJSON: JSON = JSON(response.result.value!)
                 self.updateVideo(json: videoJSON)
 
